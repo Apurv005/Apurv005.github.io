@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Game</title>  
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container{
+            width: 50%;
+            height: 80%;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .container .box{
+            border: 1px solid black;
+            width: 25%;
+            height: 25%;
+            display: flex;
+            box-sizing: border-box;
+        }
+        .container .box.hidden{
+            background: none !important;
+        }
+        .timer{
+            background-color: rgb(212, 237, 100);
+            color: #000;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+    </div>
+    <div class="timer" id="timer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
