@@ -68,7 +68,7 @@
         }, 1000);
         uHour.addEventListener("blur", () => {
             // Validate Name Here:
-            let reg = /^(\d|[0]\d|1[0-9]|2[0-4])$/; // (^It Must Start with a-z Or A-Z.)(it can be any between a-z Or A-Z)(Length must be 2-9 character long.)
+            let reg = /^(\d|[0]\d|1[0-9]|2[0-4])$/; // Regex Validation
             uHourStr = uHour.value;
             if (reg.test(uHourStr)) {
                 uHour.classList.remove("is-invalid");
