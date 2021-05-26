@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navigation{
+    height: 74px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font1);
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+.nav-left span{
+    font-size: 30px;
+}
+.nav-left ul{
+    display: flex;
+    align-items: center;
+    margin: 0 70px;
+}
+
+.nav-left ul li{
+    list-style: none;
+    padding: 0px 20px;
+    font-family: var(--font2);
+    font-size: 18px;
+    
+}
+
+.nav-left ul li a{
+    text-decoration: none;
+    color: rgb(14, 24, 170);
+}
+.nav-left ul li a:hover{
+    color: var(--min-bg-color);
+
+}
+.content{
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+.content::after{
+    content: "";
+    position: absolute;
+    background-image: url(../graphicImg/Article3/D_47.svg);
+    width: 100%;
+    height: inherit;
+    opacity: 0.13;
+    z-index: -1;
+}
+.content-left{
+    font-family: var(--font1);
+    /* width: 50%; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+}
+
+.content-right{
+    /* width: 50%; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 13px;
+}
+
+.content-right img{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 1px;
+}
+.home-articles{
+    /* height: 500px; */
+    background-color: rgb(248, 233, 233, 0.5);
+    padding-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+.home-article{
+    display: flex;
+    margin: 25px;
+}
+.home-article img{
+    width: 25vw;
+    border-radius: 13px;
+}
+.home-aricle-content{
+    align-self: center;
+    padding: 0px 25px;
+}
+.home-aricle-content a{
+    text-decoration: none;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: rgb(2, 25, 44);
+    color: white;
+    font-family: var(--font1);
+}
