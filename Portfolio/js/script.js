@@ -5,7 +5,7 @@ let ToggleMenu = document.querySelector(".ToggleMenu");
 // Sticky Navigation:
 let navBar = document.querySelector(".navigation");
 window.onscroll = () => {
-    if (this.scrollY > 50) {
+    if (this.scrollY > 20) {
         navBar.classList.add("sticky");
         clickedA.forEach((items) => {
             items.classList.add("scrollHover");
