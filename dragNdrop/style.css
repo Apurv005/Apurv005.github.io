@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightsalmon;
+}
+h2{
+    text-align: center;
+    margin: 10px 0px;
+}
+.whiteBox{
+    height: 350px;
+    width: 280px;
+    background: white;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid black;
+}
+.imgBox{
+    background-image: url(image.jpg);
+    background-size: cover;
+    position: relative;
+    top: 10px;
+    height: 320px;
+    width: 245px;
+    margin: 0px auto;
+    display: block;
+    cursor: pointer;
+}
+.hold{
+    border: 4px solid red;
+}
+
+.hide{
+    display: none;
+}
+
+.dashed{
+    background: rgb(245, 223, 245);
+    border-style: dashed;
+}
