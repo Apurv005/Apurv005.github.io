@@ -78,7 +78,7 @@ html{
 #home::before{
     content: "";
     position: absolute;
-    background: url("../images/backgrounds/b2.jpg") no-repeat center center/cover;
+    background: url("https://source.unsplash.com/1600x900/?food") no-repeat center center/cover;
     height: 83%;
     top: 0;
     left: 0;
