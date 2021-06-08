@@ -166,7 +166,16 @@ userContact.addEventListener("blur", () => {
         errorCMessage.classList.add("isInvalid");
     }
 });
-
+let submitBtn = document.getElementById("submitBtn");
+submitBtn.addEventListener("click",(e)=>{
+    if(validateUserName && validateEmail && validateContact){
+        alert("Your Response is currently not submited! Please send it after some time");
+    }
+    else{
+        alert("Please fill details carefully");
+    }
+    e.preventDefault();
+});
 // Jquery Plugin:
 // JavaScript For Dynamic Typing: 
 var typed = new Typed("#dType", {
