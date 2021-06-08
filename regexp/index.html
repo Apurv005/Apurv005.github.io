@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Using JavaScript</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../Bootstrap/Bootstrap/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+</style>
+
+<body>
+    <h2 class="text-center my-3">Appu Travel Desk</h2>
+    <small class="d-block text-center">Complete Form Validation Using Regular Expression</small>
+    <hr>
+    <div id="alert"></div>
+    <div class="container">
+        <form class="row g-3" autocomplete="off">
+            <div class="col-md-12">
+                <label for="inputName" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="inputName">
+                <small class="invalid-feedback">User Name Must Be 2-15 Character Long And Can't Start With
+                    Number.</small>
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail" class="form-label" autocapitalize="false">Email</label>
+                <input type="text" class="form-control" id="inputEmail">
+                <small class="invalid-feedback">Email must contain @ and .</small>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword">
+                <small class="invalid-feedback">Password: 8-12 characters || 1 UpperCase Character || 1 LowerCase
+                    Character || 1 Special Symbol</small>
+            </div>
+            <div class="col-12">
+                <label for="inputNumber" class="form-label">Enter Mobile</label>
+                <input type="text" class="form-control" id="inputNumber">
+                <small class="invalid-feedback">Mobile number must be 10 digits</small>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputCar" class="form-label">Select Your Car</label>
+                <select id="inputCar" class="form-select">
+                    <option>Omni</option>
+                    <option>Maruti 800</option>
+                    <option>Ford Titanium</option>
+                    <option>Audi A4</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputPinCode" class="form-label">Pincode</label>
+                <input type="text" class="form-control" id="inputPinCode">
+                <small class="invalid-feedback">PinCode must be 6 digits</small>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-grid gap-2 col-3 ">
+                    <button class="btn btn-primary" id="submit" type="button">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <hr>
+    <h2 class="text-center">Developed By: Apurv Patel</h2>
+    <h3 class="text-center">Developer Contact: <a href="https://apurv005.github.io/Portfolio/" target="_blank">click here</a></h3>
+    <script src="fromValdiateScript.js"></script>
+    <script src="../../Bootstrap/Bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>
