@@ -126,6 +126,10 @@ let errorEMessage = document.getElementById("errorEMessage");
 let errorCMessage = document.getElementById("errorCMessage");
 let userContact = document.getElementById("userNumber");
 
+let validateUserName;
+let validateEmail;
+let validateContact;
+
 // UserName Validation:
 userName.addEventListener("blur", () => {
     // Validate Name Here:
