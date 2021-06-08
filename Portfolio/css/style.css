@@ -878,7 +878,13 @@ html{
     font-family: var(--font2);
     color: #000;
 }
-
+.footerSection p a{
+    text-decoration: none;
+    color: #000;
+}
+.footerSection p a:hover{
+    color: rgb(27, 27, 27);
+}
 
 /* Go To Top Button: */
 .scrollTopButton{
