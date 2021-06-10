@@ -20,6 +20,7 @@
     </div>
 
         <hr>
+        <div id="alert"></div>
         <div class="row d-flex justify-content-center">
             <div class="mb-3 col-md-2">
                 <label for="uHour" class="form-label">Enter Hour</label>
@@ -62,6 +63,8 @@
         let validuHour = false;
         let validuMinutes = false;
         let validuSeconds = false;
+        let alert = document.getElementById("alert");
+        let uiString = '';
         alarmStopBtn.style.display = "none";
 
         setInterval(() => {
@@ -110,6 +113,14 @@
 
         alarmBtn.addEventListener("click", () => {
             if(validuHour && validuMinutes && validuSeconds){
+                uiString = `<div id="alert" class="alert alert-info alert-dismissible fade show" role="alert">
+                                <strong>Success!</strong> Your Alarm Will Be Set To ${uHourStr}:${uMinutesStr}:${uSecondsStr}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>`;
+                alert.innerHTML = uiString;
+                setTimeout(() => {
+                    alert.innerHTML = '';
+                }, 3000);
             interVal = setInterval(() => {
                 const myDate = new Date();
                 let cHour = myDate.getHours();
@@ -130,7 +141,14 @@
             }, 1000);
         }
     else{
-        alert("Please Enter Proper Value!!")
+        uiString = `<div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Warning!</strong> Please Enter Proper Details!!! 
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
+                            </div>`;
+                alert.innerHTML = uiString;
+                setTimeout(() => {
+                    alert.innerHTML = '';
+                }, 3000);
     }
         });
    
