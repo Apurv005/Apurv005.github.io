@@ -1,0 +1,243 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top:0;
+    left: 0;
+    z-index: 999;
+}
+/*Navigation Bar: Logo And Image */
+#logo{
+    margin: 4px 5px;
+}
+
+#logo img{
+    height: 71px;
+    margin: 11px 20px;
+    filter: invert(100%);
+}
+
+/* Navigation Bar: List Styling */
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bree Serif', serif;
+    
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    align-items: center;
+    justify-content: center;
+    height: 455px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    background: url("https://source.unsplash.com/1600x900/?food") no-repeat center center/cover;
+    height: 83%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+/* Services Section */
+
+#services{
+    margin: 34px;    
+    display: flex;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 23px;
+    background-color: #ffdada;
+}
+#services .box img{
+    height: 150px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+#services .box p{
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+/* Clints Sections */
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../images/backgrounds/b2.jpg") no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#client-section{
+position: relative;
+display:flex;
+flex-direction:column;
+top:0;
+left:0;
+z-index:-1;
+height:auto;
+align-items:center;
+justify-content:center;
+}
+
+#client-section img{
+height: 124px;
+padding: 15px;
+}
+
+#client-section h1{
+	
+}
+
+.client-item{
+    padding: 34px 50px;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	
+}
+
+/* Contacts Section */
+#contact{
+    position: relative;
+	display:flex;
+	top:0;
+	left:0;
+	flex-direction:column;
+}
+#contact-box{
+    display: flex;
+	
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../images/backgrounds/contact.jpg") no-repeat center center/cover;
+    z-index: -1;
+    top:0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#contact .btn{
+	display:block;
+	width:40%;
+	margin:16px auto;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 19px 20px;
+}
+
+/* utility classes */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary{
+    font-size: 1.8rem;
+    padding: 12px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 16px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}

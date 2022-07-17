@@ -1,0 +1,305 @@
+
+/* Media Queries:: */
+@media only screen and (max-width : 1150px){
+    /* Skills Section: */
+    .skillSection{
+        height: auto;
+    }
+    .aboutSection{
+        height: auto;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .aboutSection .image{
+        margin-top: 1.5rem;
+    }
+    .aboutSection .image img{
+        border-radius: 10px;
+        height: 400px;
+        width: 400px;
+    }
+    .aboutSection .content .contentPosition{
+        margin: 1.5rem 0;
+    }
+    .previewBox{
+        max-width: 80%;
+        width: 70%;
+    }
+    .previewBox .imageBox{
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width : 1000px){
+    .hambargerIcon{
+        display: block;
+    }
+    /* .ToggleMenu{
+        display: none;
+    } */
+    .navigation .navLogo{
+        width: auto;
+        margin: 0px 10px;
+    }
+    .navigation .ToggleMenu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 18rem;
+        background: #0984e3;
+        box-shadow: 0.2rem 0 .5rem #333;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        /* z-index: 999; */
+    }
+    .navToggle{
+        right: 0% !important; 
+    }
+    .navigation .ToggleMenu .navItems{
+        flex-direction: column;
+        height: 50%;
+        /* background-color: yellow; */
+        justify-content: center;
+    }
+    .navigation .navItems ul{
+        flex-direction: column;
+        /* height: 100%; */
+        /* flex-flow: column; */
+        justify-content: center;
+
+    }
+    .navigation .navItems ul li{
+        margin: 10px 0;
+    }
+    .navigation .navSearchBox{
+        width: 50%;
+        margin: 25px 0px;
+    }
+    .navigation .navSearchBox .button .searchBtn{
+        width: 70%;
+    }
+    .fa-times{
+        transform: rotateZ(180deg);
+    }
+
+    /* Conatct Me Section: */
+    .contactSection .contactWrapper .contactInfo .icons {
+        width: 55%;
+        margin: 5px 22px;
+    }
+    .contactSection .contactWrapper .contactContent .contactInfo .image {
+        width: auto;
+    }
+    .contactSection .contactWrapper .contactContent .contactInfo .image .imgEmail {
+        width: 75px;
+    }
+
+    /* Education Section ..........................................................*/
+    
+    .respEducationOuter{
+        /* border: 1px solid black; */
+        /* height: 145vh; */
+        width: 57%;
+        display: flex;
+        /* align-items: center; */
+        margin: 5px auto;
+        justify-content: center;
+        position: relative;
+        padding: 10px 0px;
+        /* background-color: yellow; */
+    }    
+    .respEducationOuter .respDivLine{
+        width: 10%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+    
+    .respEducationOuter .respDivLine .respLine{
+        width: 3px;
+        background-color: black;
+        height: 101%;
+        border-radius: 15px;
+        /* height: 100vh; */
+        z-index: -1;
+    }
+
+    .boxWrapperDiv{
+        width: 100%;
+        z-index: 10;
+    }
+    .boxWrapperDiv .box{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid var(--min-bg-color);
+        position: relative;
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out;
+        /* margin: 100px 0px; */
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        background-color: #dfe6e9;
+        margin-top: 20px;
+    }
+    .boxWrapperDiv .box .boxImage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .boxWrapperDiv .box .boxContent{
+        text-align: center;
+    }
+    .box:hover{
+        box-shadow: 0px 0px 10px #000;
+    }
+    .box img{
+        /* position: absolute; */
+        width: 70px;
+        height: 74px;
+    }
+    .box .statusImg{
+        position: absolute;
+        bottom: 12px;
+        right: 36px;
+        width: 45px;
+        height: 50px;
+    }
+    
+    
+    
+    /* Common box Fontsize and size */
+    .box h1{
+        font-size: 1.5rem;
+        font-family: var(--font1);
+        font-weight: bolder;
+    }
+    .box p{
+        font-size: var(--mediumFont);
+        font-family: var(--font1);
+    }
+}
+
+@media only screen and (max-width : 800px){
+    .contactSection .contactWrapper .contactContent{
+        width: 100%;
+    }
+    .contactSection .contactWrapper .contactContent .contactForm {
+        width: 80%;
+    }
+    .contactSection .contactWrapper .contactContent{
+        flex-direction: column-reverse;
+    }
+    .contactSection .contactWrapper .contactContent .contactInfo{
+        width: auto;
+        margin: 5px 0px;
+    }
+    .contactSection .contactWrapper .contactContent .contactInfo .alignContentInfo{
+        width: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contactSection .contactWrapper .contactContent .contactInfo .contactDetails{
+        flex-direction: column;
+    }
+    .contactSection .contactWrapper .contactContent .contactInfo .contactDetails .text{
+        width: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .contactSection .contactWrapper .contactContent .contactInfo .image {
+        justify-content: center;
+    }
+    .contactSection .contactWrapper .contactContent .contactInfo .contactDetails .text p{
+        text-align: center;
+    }
+    .contactSection .contactWrapper .contactInfo .icons{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width : 760px){
+    .aboutSection .content {
+        width: auto;
+    }
+    .aboutMeSection{
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .respEducationOuter{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width : 540px){
+    .respEducationOuter{
+        width: 90%;
+    }
+    .aboutMeSection .text {
+        width: auto;
+    }
+    .previewBox{
+        max-width: 100%;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width : 480px){
+    .respEducationOuter{
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width : 405px){
+    .aboutSection .image img {
+        height: 300px;
+    }
+    .aboutSection .content .contentPosition .name {
+        margin: -25px -2px;
+        font-size: 3rem;
+    }
+    .aboutSection .content .contentPosition .hello {
+        font-size: 2rem;
+    }
+    .aboutSection .content .contentPosition .role {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width : 370px){
+    .projectBox .pBox {
+        width: 310px;
+        height: 260px;
+    }
+    .certificateSection .imgaes_wrapper .items img{
+        width: 310px;
+        height: 260px;
+    }
+}
+
+@media only screen and (max-width : 352px){
+    .box .statusImg {
+        position: initial;
+    }
+    .box .statusImg{
+        right: 25px;
+    }
+    .certificateSection .imgaes_wrapper .items{
+        transform: scale(0.9);
+    }
+    .certificateSection .imgaes_wrapper .items:hover{
+        transform: scale(1);
+    }
+    .certificateSection .imgaes_wrapper {
+        margin-top: 0;
+    }
+}

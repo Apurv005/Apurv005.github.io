@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock Using JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+        <h2 class="d-inline text-success">Alarm Clock</h2>
+        <p class="d-inline mx-4"><span id="curretTimeAfterh1"></span></p>
+        <h5 style="font-size:0.8rem; margin: 5px 0px;">Note: If audio is not audiable than check the browser permission</h5>   
+    </div>
+
+        <hr>
+        <div id="alert"></div>
+        <div class="row d-flex justify-content-center">
+            <div class="mb-3 col-md-2">
+                <label for="uHour" class="form-label">Enter Hour</label>
+                <textarea class="form-control" id="uHour" rows="2"></textarea>
+                <small class="invalid-feedback">Hours: 0-24</small>
+            </div>
+            <div class="mb-3 col-md-2">
+                <label for="uMinutes" class="form-label">Enter Minutes</label>
+                <textarea class="form-control" id="uMinutes" rows="2"></textarea>
+                <small class="invalid-feedback">Minutes: 0-60</small>
+            </div>
+            <div class="mb-3 col-md-2">
+                <label for="uSeconds" class="form-label">Enter Seconds</label>
+                <textarea class="form-control" id="uSeconds" rows="2"></textarea>
+                <small class="invalid-feedback">Seconds: 0-60</small>
+            </div>
+            <div class="btn">
+                <button type="button" class="btn btn-outline-primary" id="alarmBtn">Set Alarm</button>
+                <button type="button" class="btn btn-outline-danger" id="alarmStopBtn">Stop Alarm</button>
+            </div>
+        </div>
+        <hr>
+        <h3 class="text-center">Developed By: <span class="text-success"> Apurv Patel </span></h3>
+        <h4 class="text-center">Developer Contact: <a href="https://apurv005.github.io/Portfolio/" target="_blank">click here</a></h4>
+        
+    </div>
+
+    <script>
+        let audio = new Audio("Kalimba.mp3");
+        let alarmBtn = document.getElementById("alarmBtn");
+        let alarmStopBtn = document.getElementById("alarmStopBtn");
+        let uHour = document.getElementById("uHour");
+        let uMinutes = document.getElementById("uMinutes");
+        let uSeconds = document.getElementById("uSeconds");
+        let h1Display = document.getElementById("curretTimeAfterh1");
+        let interVal;
+        let uHourStr = uHour.value;
+        let uMinutesStr = uMinutes.value;
+        let uSecondsStr = uSeconds.value;
+        let validuHour = false;
+        let validuMinutes = false;
+        let validuSeconds = false;
+        let alert = document.getElementById("alert");
+        let uiString = '';
+        alarmStopBtn.style.display = "none";
+
+        setInterval(() => {
+            const myDateDisplay = new Date();
+            h1Display.innerHTML =  `Current Time: ${myDateDisplay.getHours()} : ${myDateDisplay.getMinutes()} : ${myDateDisplay.getSeconds()}`;
+        }, 1000);
+        uHour.addEventListener("blur", () => {
+            // Validate Name Here:
+            let reg = /^(\d|[0]\d|1[0-9]|2[0-4])$/; // Regex Validation
+            uHourStr = uHour.value;
+            if (reg.test(uHourStr)) {
+                uHour.classList.remove("is-invalid");
+                validuHour = true;
+            }
+            else {
+                uHour.classList.add("is-invalid");
+            }
+        });
+
+        uMinutes.addEventListener("blur", () => {
+            // Validate Name Here:
+            let reg = /^(\d|[0]\d|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|6[0])$/; 
+            uMinutesStr = uMinutes.value;
+            if (reg.test(uMinutesStr)) {
+                uMinutes.classList.remove("is-invalid");
+                validuMinutes = true;
+            }
+            else {
+                uMinutes.classList.add("is-invalid");
+            }
+        });
+
+        uSeconds.addEventListener("blur", () => {
+            // Validate Name Here:
+            let reg = /^(\d|[0]\d|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|6[0])$/; 
+            uSecondsStr = uSeconds.value;
+            if (reg.test(uSecondsStr)) {
+                uSeconds.classList.remove("is-invalid");
+                validuSeconds = true;
+            }
+            else {
+                uSeconds.classList.add("is-invalid");
+            }
+        });
+        
+
+        alarmBtn.addEventListener("click", () => {
+            if(validuHour && validuMinutes && validuSeconds){
+                uiString = `<div id="alert" class="alert alert-info alert-dismissible fade show" role="alert">
+                                <strong>Success!</strong> Your Alarm Will Be Set To ${uHourStr}:${uMinutesStr}:${uSecondsStr}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>`;
+                alert.innerHTML = uiString;
+                setTimeout(() => {
+                    uiString = "";
+                    alert.innerHTML = '';
+                }, 3000);
+            interVal = setInterval(() => {
+                const myDate = new Date();
+                let cHour = myDate.getHours();
+                let cMinutes = myDate.getMinutes()
+                let cSeconds = myDate.getSeconds();
+                if (cHour == uHourStr && cMinutes == uMinutesStr && cSeconds == uSecondsStr) {
+                    audio.play();
+                    uHour.value = '';
+                    uMinutes.value = '';
+                    uSeconds.value = '';
+                    alarmBtn.style.display = "none";
+                    alarmStopBtn.style.display = "inline";
+                    validuHour = false;
+                    validuMinutes = false;
+                    validuSeconds = false;
+                }
+                else {
+                    // alarmStopBtn.style.display = "none";
+                    // alarmBtn.style.display = "block";
+                }
+            }, 1000);
+        }
+    else{
+        uiString = `<div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Warning!</strong> Please Enter Proper Details!!! 
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
+                            </div>`;
+                alert.innerHTML = uiString;
+                setTimeout(() => {
+                    uiString = "";
+                    alert.innerHTML = '';
+                }, 3000);
+    }
+        });
+   
+        alarmStopBtn.addEventListener("click", () => {
+            clearInterval(interVal);
+            audio.pause();
+            alarmBtn.style.display = "inline";
+            alarmStopBtn.style.display = "none";
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
