@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postman Clone - RequestMan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Baloo Bhai 2', cursive !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">RequestMan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./developercontact.html">Developer Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="my-3">Welcome To RequestMan</h1>
+        <hr>
+    </div>
+    <div class="container">
+        <!-- URL BOX -->
+        <div class="mb-3">
+            <label for="urlField" class="form-label">Enter URL:</label>
+            <input type="text" class="form-control" id="urlField" placeholder="Enter URL">
+        </div>
+
+        <!-- Request type -->
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">URL Type:</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="getRadio" value="GET">
+                    <label class="form-check-label" for="getRadio">
+                        Get
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radios" id="postRadio" value="POST">
+                    <label class="form-check-label" for="postRadio">
+                        Post
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Content Type Box  -->
+        <fieldset id="hideRadios">
+            <div class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Content Type:</legend>
+
+            <div class="col-sm-10" >
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Contentradios" id="jsonRadio" value="json"
+                        checked>
+                    <label class="form-check-label" for="jsonRadio">
+                        JSON
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Contentradios" id="paramsRadio" value="parms">
+                    <label class="form-check-label" for="paramsRadio">
+                        Custom Parameters
+                    </label>
+                </div>
+            </div>
+        </div>
+        </fieldset>
+
+        <!-- Parameter Box: This will hide on clicking json option in content type. -->
+        <div id="parametersBox">
+            <div class="row">
+                    <label for="urlField" class="form-label col-md-2">Parameter 1:</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Enter Parameter 1 Key" id="parameterKey1"
+                            aria-label="First name">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Enter Parameter 1 Value"
+                            aria-label="Last name" id="parameterValue1">
+                    </div>
+                <button class="btn btn-primary col-sm-2" id="addCustomParameter">+</button>
+            </div>
+            <div id="addparameters"></div>
+        </div>
+
+        <!-- JSON RequestBox : This will hide on clicking parameters option in content type.  -->
+        <div id="jsonBox" class="my-2">
+            <div class="mb-3 form-group row">
+                <label for="jsonInputText" class="form-label col-md-2">Enter Request JSON:</label>
+                <div class="col-md-10">
+                    <textarea class="form-control " id="jsonInputText" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button which will trigger fetch api -->
+        <div class="form-group d-flex justify-content-center my-2">
+            <button class="btn btn-primary col-md-2" id="submit">Submit</button>
+        </div>
+
+        <!-- Response Box -->
+
+        <div id="resposeBox" class="my-2">
+            <div class="mb-3 form-group row">
+                <label for="responseBox" class="form-label col-md-2">Response:</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" id="responseBox" rows="3"
+                        placeholder="Your response will appear here" disabled></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

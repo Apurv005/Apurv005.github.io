@@ -1,0 +1,94 @@
+@media only screen and (max-width : 1152px){
+    .rightNav input{
+        width: 120px;
+    }
+    
+    .rightNav .btn-sm{
+        width: 25%;
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width : 796px){
+    /* Humburg Menu Here.. */
+    .navbar{
+        height: 500px;
+        flex-direction: column;
+        transition: all 0.5s ease-out;
+        background: #393e40;
+    }
+    .nav-list{
+        flex-direction: column;
+    }
+    .rightNav{
+        text-align: center;
+        flex-direction: column;
+    }
+    .rightNav .btn-sm{
+        margin: 8px;
+        width: 100px;
+        font-size: 18px;
+    }
+    .rightNav input{
+        width: 170px;
+    }
+    .logo img{
+        width: 80px;
+    }
+    .burger{
+        position: absolute;
+        right: 5%;
+        top: 15px;
+        cursor: pointer;
+    }
+    .line{
+        width: 33px;
+        background-color: #fff;
+        height: 4px;
+        margin: 5px 3px;
+    }
+    .h-nav{
+        height: 72px;
+    }
+    .v_class{
+        opacity: 0;
+    }
+
+    /* .nav-list li{
+        padding: 26px 9px;
+    } */
+    .box_main{
+        flex-direction: column-reverse;
+    }
+
+    .desc{
+        flex-direction: column-reverse;
+    }
+    .desc img{
+        width: 40%;
+    }
+    .paraBig{
+        font-size: 30px;
+    }
+    .paraSmall{
+        font-size: 18px;
+    }
+    .submitBtn{
+        width: 40%;
+    }
+    .firstHalf{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 439px){
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fBtn{
+        width: 65%;
+        margin: 5px 0px;
+    }
+}

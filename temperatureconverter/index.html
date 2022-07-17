@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter Using JavaScript</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(238, 217, 132);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .innerContainer {
+            height: 300px;
+            background-color: rgb(221, 115, 133);
+            box-shadow: 0px 1px 9px black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .innerContainer .heading {
+            margin: 0px 0px 10px 0px;
+        }
+
+        .innerContainer .inputBoxes {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .innerContainer .inputBoxes #convtName {
+            font-size: 1.3rem;
+            width: 50%;
+
+        }
+
+        .innerContainer .inputBoxes #tempNum {
+            font-size: 1.3rem;
+            width: 35%;
+            margin-right: 5px;
+        }
+
+        .innerContainer .buttons {
+            margin: 15px auto;
+            width: 100%;
+        }
+
+        .innerContainer .buttons #btn1 {
+            display: block;
+            margin: 25px auto;
+            width: 40%;
+            padding: 10px 0px;
+            font-size: 1rem;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        body h4{
+            text-align: center;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="innerContainer">
+            <div class="heading">
+                <h2>Please enter the temperature you'd like to convert...</h2>
+            </div>
+            <form id="tempCalc" onsubmit="calculateTemp(); return false">
+                <div class="inputBoxes">
+                    <input type="number" name="tempNum" id="tempNum">
+                    <select name="convtName" id="convtName">
+                        <option value="Celsius">Celsius</option>
+                        <option value="Fahrenhit">Fahrenhit</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <input id="btn1" type="submit" value="Submit">
+                    
+                </div>
+            </form>
+            <span id="Output" style="font-size: 1.5rem;"></span>
+        </div>
+        <h4>Developed By: Apurv Patel</h4>
+        <h4>For further details please contact <a href="https://apurv005.github.io/Portfolio/" target="_blank">click here</a></h4>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

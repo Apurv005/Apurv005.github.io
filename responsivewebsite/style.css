@@ -1,0 +1,220 @@
+/* Reset Css*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* Navigation Bar Css */
+
+body{
+    font-family: 'Baloo Bhai 2', cursive ;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+.nav-list{
+    width: 75%;
+    /* background-color: rgb(13, 14, 13); */
+    display: flex;
+    align-items: center;
+
+}
+.nav-list li{
+    list-style: none;
+    padding: 26px 19px;
+}
+.nav-list li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+.nav-list li a:hover{
+    color: gray;
+}
+
+
+.logo{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.logo img{
+    width: 40%;
+    border: 3px solid white;
+    border-radius: 16px;
+}
+
+.rightNav{
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.rightNav input{
+    width: 50%;
+    height: 35px;
+    border-radius: 12px;
+    padding: 0px 10px;
+    font-size: 22px;
+    border: 2px solid gray;
+}
+
+.rightNav .btn-sm{
+    width: 30%;
+    padding: 4px 0px;
+    margin-left: 6px;
+}
+
+.background{
+    background: rgba(0, 0, 0, 0.7) url("images/bg.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.box_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 80%;
+    margin: auto;
+    height: 75%;
+}
+.firstSection{
+    height: 100vh;
+}
+.firstHalf{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.secondHalf{
+    width: 30%;
+    /* border: 1px solid black; */
+    
+}
+.secondHalf img{
+    width: 90%;
+    margin: auto;
+    display: block;
+    border-radius: 50px;
+}
+
+.text_bg{
+    font-size: 40px;
+}
+.text_sm{
+    font-size: 20px;
+}
+.buttons{
+    margin: 8px 0px;
+}
+.btn{
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 12px;
+    background: none;
+    color: white;
+    width: 20%;
+    font-size: 21px;
+    cursor: pointer;
+}
+.fBtn{
+    width: 40%;
+}
+/* Description */
+.description{
+    width: 100%;
+    height: auto;
+    /* background-color: cornflowerblue; */
+}
+
+.desc{
+    max-width: 80%;
+    /* border: 1px solid black; */
+    height: auto;
+    margin: 90px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 0px 20px;
+}
+
+.desc img{
+    width: 300px;
+    width: 30%;
+    border-radius: 18px;
+}
+.left{
+    flex-direction: row-reverse;
+}
+
+/* Contact Us: */
+.contact{
+    width: 100%;
+    height: auto;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+.contact p{
+    font-size: 3rem;
+}
+
+.contact .formDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    align-items: center;
+}
+.contact .formDiv .editField
+{
+    width: 70%;
+    padding: 10px;
+    font-size: 23px;
+    margin: 10px;
+    border: 2px solid gray;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.submitBtn{
+    color: rgb(19, 18, 18);
+    border: 2px solid rgb(19, 18, 18);
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(58, 62, 64);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textFooter{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+/* Media Queries: */
