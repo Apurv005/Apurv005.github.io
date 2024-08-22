@@ -147,7 +147,7 @@ html{
     background-color: #dfe6e9;
     display: flex;
     padding: 12px 0px;
-    height: 88vh;
+/*     height: 88vh; */
 }
 
 .aboutSection .content{
@@ -166,7 +166,7 @@ html{
     font-size: 35px;
 }
 .aboutSection .content .contentPosition .name{
-    margin: -25px -3px;
+/*     margin: -25px -3px; */
 }
 .aboutSection .content .contentPosition .name span{
     color: var(--min-bg-color);
@@ -186,7 +186,7 @@ html{
 }
 /* Profile Section Image */
 .aboutSection .image{
-    width: 40%;
+    /* width: 40%;  */
     /* background-color: yellow; */
     display: flex;
     align-items: center;
